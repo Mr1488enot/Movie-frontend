@@ -4,6 +4,8 @@ let country = document.querySelector('.country')
 let year = document.querySelector('.year')
 let rating = document.querySelector('.rating')
 let add = document.querySelector('button')
+const list=document.querySelector('.list')
+const nav=document.querySelectorAll('.nav')
 
 const movie = [
     { name: 'Зеленая миля', country: 'USA', year: 1999, rating: 9.1 },
@@ -21,17 +23,9 @@ const movie = [
     { name: 'Человек паук', country: 'USA', year: 2002, rating: 8.1 },
 ]
 
-// const list = document.querySelector('.list')
+
 
 add.addEventListener("click", addList,{})
-
-
-
-
-
-
-
-
 
 function addList() {
     let movieAdd =
@@ -43,5 +37,18 @@ function addList() {
         }
     movie.push(movieAdd);
     console.log(movie)
+}
+
+
+
+
+
+//page
+
+for(let i =0; i< nav.length;i++){
+    nav[i].addEventListener('click',function (event){
+        const href = event.target.getAttribute('href')
+        list.innerHTML = href
+    })
 }
 
