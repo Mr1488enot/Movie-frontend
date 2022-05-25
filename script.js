@@ -16,26 +16,28 @@ const movies = [
     { name: 'Матрица', country: 'USA', year: 1999, rating: 8.5 },
     { name: 'Человек паук', country: 'USA', year: 2002, rating: 8.1 },
 ]
+
+console.log(movies.length)
+
+co
   
-for (const i = 0, length = movies.length; i < length; i++) {
-    console.log(movies[i]);
-  }
+for (let i = 0; i < movies.length; i++) {
+   
+    let movie = movies[i]
 
-
-movieBody.innerHTML = `
+    movieBody.innerHTML += `
     <tr>
-        <th>Отступники</th>
-        <th>США</th>
-        <th>2006 г.</th>
-        <th>8,5</th>
+        <th>${movie.name}</th>
+        <th>${movie.country}</th>
+        <th>${movie.year}</th>
+        <th>${movie.rating}</th>
     </tr>
-`
+    `
 
-movieBody.innerHTML += `
-    <tr>
-        <th>Матрица</th>
-        <th>США</th>
-        <th>2006 г.</th>
-        <th>8,5</th>
-    </tr>
-`
+}
+
+
+
+
+
+
